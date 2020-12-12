@@ -13,9 +13,9 @@
         assign_public_ip: yes
         wait: yes
         group: eshop
-        aws_access_key: "{{access_key}}"
-        aws_secret_key: "{{secret_key}}"
-        security_token: "{{session_token}}"
+        aws_access_key: "ASIA4IXGB2KJABYF3B4Z"
+        aws_secret_key: "5L6DxfEyPaCE2T9ErKoIHA71Zibaf4jFoIIPVkex"
+        security_token: "FwoGZXIvYXdzECIaDEPLv8DBaZDuFUFPtiLCAboDGXxGLYjHBO5bn7Mt7YSCDVrepXkgsUGZBNqjPWRFQjR9GAFxon25SaLpAnPU03T22FOs0kdyeBKQIPYb6gLJQd5wu7Va12fCmK8uU2rEwELmaJyJvwtmi7lot8/F1y1/kkM5+nt+ks06DSAe94BGEGauRj6NFJpBrEBQ+FHNUAXZGjOL8/nPMuJ0NevEQOPcVjfoCCW3l/0Hup9RZdZqVNuqS0Ho0Suft/MXdInioXU/B9MpRiMW7JkSku4hvH9QKP3u0/4FMi3UDQ+NmPa8kQkAcB5VvgX2LI/usCLqGyFY7fgGp5B2j+zOKcXtx/csIucwViQ="
         count: 1
       register: ec2
 
