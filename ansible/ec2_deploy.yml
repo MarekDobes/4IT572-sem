@@ -8,16 +8,14 @@
         instance_type: t2.micro
         image: ami-085925f297f89fce1
         region: us-east-1
-        key_name: ansible
-        vpc_subnet_id: subnet-3afd7d77
+        key_name: keypass
+        vpc_subnet_id: subnet-59cc9914
         assign_public_ip: yes
         wait: yes
         group: eshop
-        instance_tags:
-          Name: eshop
-        aws_access_key: "{{aws_access_key_id}}"
-        aws_secret_key: "{{aws_secret_access_key}}"
-        security_token: "{{aws_session_token}}"
+        aws_access_key: "{{access_key}}"
+        aws_secret_key: "{{secret_key}}"
+        security_token: "{{session_token}}"
         count: 1
       register: ec2
 
