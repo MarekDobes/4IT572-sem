@@ -26,7 +26,7 @@ jobs:
       - run: chmod 400 keypass.pem
       - run: echo ${VAULT_PASS} > vault_pass.txt
       - run:
-         command: ansible-playbook ansible/ec2_deploy.yml --user ubuntu --key-file ansible/keypass.pem --vault-password-file vault_pass.txt
+         command: ansible-playbook ansible/ec2_deploy.yml --user ubuntu --key-file ansible/keypass.pem --ask-vault-pass andreasbergh
          environment:
             ANSIBLE_HOST_KEY_CHECKING: False
 workflows:
