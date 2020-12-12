@@ -47,7 +47,7 @@
       become: yes
     - name: Get project files from github
       git:
-        repo: 'https://github.com/havtom/4IT572_sem.git'
+        repo: 'https://github.com/MarekDobes/4IT572-sem'
         dest: ./app
     - name: Build docker with eshop
       shell: cd app && docker build -t myeshop:latest .
