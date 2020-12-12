@@ -23,9 +23,8 @@ jobs:
       - run: pip3 install boto boto3
       - run: echo ${PEM_FILE} | tr , '\n' > ansible/keypass.pem
       - run: chmod 400 ansible/keypass.pem
-      - run: echo ${VAULT_PASS} > ansible/group_vars/all/aws.yml
       - run:
-         command: ansible-playbook ansible/ec2_deploy.yml --user ubuntu --key-file ansible/keypass.pem --vault-password-file ansible/group_vars/all/aws.yml
+         command: ansible-playbook ansible/ec2_deploy.yml --user ubuntu --key-file ansible/keypass.pem
          environment:
             ANSIBLE_HOST_KEY_CHECKING: False
 workflows:
