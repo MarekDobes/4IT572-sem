@@ -24,7 +24,6 @@ jobs:
       - run: echo ${PEM_FILE} | tr , '\n' > keypass.pem
       - run: sudo chmod 400 keypass.pem
       - run: sudo chmod 400 ansible/keypass.pem
-      - run: sudo chmod 400 ../keypass.pem
       - run: echo ${VAULT_PASS} > vault_pass.txt
       - run:
          command: ansible-playbook ansible/ec2_deploy.yml --user ubuntu --key-file ansible/keypass.pem --vault-pass-file ansible/vault_pass.txt
