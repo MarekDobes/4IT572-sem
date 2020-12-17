@@ -22,7 +22,7 @@ jobs:
       - run: pip3 install ansible
       - run: pip3 install boto boto3
       - run: echo ${PEM_FILE} | tr , '\n' > keypass.pem
-      - run: sudo chmod 400 keypass.pem
+      - run: chmod 400 keypass.pem
       - run: echo ${VAULT_PASS} > .vault_pass.txt
       - run:
          command: ansible-playbook ansible/ec2_deploy.yml --user ubuntu --key-file keypass.pem --vault-pass-file .vault_pass.txt
