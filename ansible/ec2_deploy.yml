@@ -3,6 +3,13 @@
   connection: local
   
   tasks:
+    - name: Identify running instances
+      ec2_instance_info:
+        region: us-east-1
+         aws_access_key: "{{access_key}}"
+         aws_secret_key: "{{secret_key}}"
+         security_token: "{{session_token}}"
+      register: ec2_info
     - name: Launch EC2 instance
       ec2:
         instance_type: t2.small
