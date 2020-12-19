@@ -23,7 +23,7 @@ jobs:
       - add_ssh_keys:
          fingerprints:
           - "cf:68:bf:6a:5b:15:96:1c:54:ed:06:60:52:d2:ac:1d"
-      - run: echo $PEM_FILE | sed 's/<CRLF>/\n/g' > keypass.pem
+      - run: echo $PEM_FILE | tr , '\n' > keypass.pem
       - run: chmod 400 keypass.pem
       - run: echo $VAULT_PASS > .vault_pass.txt
       - run:
