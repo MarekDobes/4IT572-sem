@@ -59,7 +59,7 @@
       become: yes
     - name: Run Docker container with eshop
       shell: docker run -p 80:3000 myeshop
-      async: 100
+      async: 55
       poll: 0
       become: yes
     - wait_for:
